@@ -54,8 +54,8 @@ export class Games {
 
     // event for close button in game details section
     $(".gameDetails .btn-close").on("click", () => {
-      $(".games").toggleClass("d-none");
-      $(".gameDetails").toggleClass("d-none");
+      $(".games").removeClass("d-none");
+      $(".gameDetails").addClass("d-none");
     });
   }
 
@@ -92,8 +92,6 @@ export class Games {
     $(window).scroll(function () {
       // console.log(this);
       if ($(this).scrollTop() > $("header").outerHeight(true) - 30) {
-        console.log($("header").offset().top);
-
         $(".navbar")
           .addClass("position-sticky")
           .css({ cssText: "top: 0px !important" });
