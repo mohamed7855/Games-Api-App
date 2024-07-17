@@ -39,7 +39,13 @@ export class Games {
     const games = await this.getData(null, category);
     this.ui.showAllGames(games);
 
-    $(".loading").removeClass("d-flex").addClass("d-none");
+    $(".loader").fadeOut(500,function(){
+      $(".loading").slideUp(500, function () {
+        $('body').css('overflow', 'auto');
+        $(this).addClass("d-none");
+      });
+    })
+    
     $(".games").removeClass("d-none");
 
     // that to use class function
