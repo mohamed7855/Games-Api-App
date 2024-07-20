@@ -7,9 +7,11 @@
 ::-webkit-scrollbar {
   width: 0.625rem;
 }
+
 ::-webkit-scrollbar-track {
   background-color: var(--second-color);
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
   border-radius: 50px;
@@ -19,7 +21,8 @@
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
 }
-.loading{
+
+.loading {
   position: fixed;
   inset: 0;
   background-color: var(--main-color);
@@ -30,7 +33,7 @@
   height: 48px;
   border-radius: 50%;
   display: inline-block;
-  border-top: 4px solid #FFF;
+  border-top: 4px solid #fff;
   border-right: 4px solid transparent;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
@@ -41,7 +44,7 @@
   -o-border-radius: 50%;
 }
 .loader::after {
-  content: '';  
+  content: "";
   box-sizing: border-box;
   position: absolute;
   left: 0;
@@ -60,7 +63,7 @@
   100% {
     transform: rotate(360deg);
   }
-} 
+}
 body {
   overflow: hidden;
   font-family: "Comfortaa", cursive;
@@ -74,15 +77,12 @@ header img {
 nav {
   background-color: rgb(58, 73, 123) !important;
   box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
-  top: -30px !important;
-  /* left: 0;
-  right: 0; */
-  /* margin: auto; */
-
-  margin: auto !important;
 }
-nav li{
-    font-size: 12px;
+#nav-row {
+  margin-top: -30px !important;
+}
+nav li {
+  font-size: 12px;
 }
 nav img {
   max-width: 50px;
@@ -108,15 +108,15 @@ main .card:hover {
 main .card figcaption p {
   color: var(--color-text) !important;
 }
-main .card .card-body p{
+main .card .card-body p {
   height: 40px;
-  overflow: hidden;           /* Hide any overflow */
-  text-overflow: ellipsis;    /* Show ellipsis (...) for overflowed text */
-  display: -webkit-box;       /* Use the old flexbox model */
+  overflow: hidden; /* Hide any overflow */
+  text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
+  display: -webkit-box; /* Use the old flexbox model */
   -webkit-box-orient: vertical; /* Orient vertically (like a column) */
-  -webkit-line-clamp: 2;      /* Limit to one line of text */
-  word-wrap: break-word;      /* Wrap long words if needed */
-  max-width: 100%;            /* Ensure the container doesn't exceed its parent width */
+  -webkit-line-clamp: 2; /* Limit to one line of text */
+  word-wrap: break-word; /* Wrap long words if needed */
+  max-width: 100%; /* Ensure the container doesn't exceed its parent width */
   white-space: normal;
 }
 .badge {
@@ -124,4 +124,3 @@ main .card .card-body p{
 }
 
 /* ====================== Game Details ====================== */
-
