@@ -5,7 +5,7 @@ export class Games {
     this.ui = new Ui();
     this.showAllGames("mmorpg");
     this.navElementEvent();
-    this.fixedNavbar();
+    // this.fixedNavbar();
   }
 
   // Fetch data based on category name or fetch game details based on game id
@@ -39,13 +39,13 @@ export class Games {
     const games = await this.getData(null, category);
     this.ui.showAllGames(games);
 
-    $(".loader").fadeOut(500,function(){
+    $(".loader").fadeOut(500, function () {
       $(".loading").slideUp(500, function () {
-        $('body').css('overflow', 'auto');
+        $("body").css("overflow", "auto");
         $(this).addClass("d-none");
       });
-    })
-    
+    });
+
     $(".games").removeClass("d-none");
 
     // that to use class function
@@ -90,22 +90,6 @@ export class Games {
       that.showAllGames($(this).html());
 
       $(".loading").removeClass("d-flex").addClass("d-none");
-    });
-  }
-
-  // event for fixed navbar
-  fixedNavbar() {
-    $(window).scroll(function () {
-      // console.log(this);
-      if ($(this).scrollTop() > $("header").outerHeight(true) - 30) {
-        $(".navbar")
-          .addClass("position-sticky")
-          .css({ cssText: "top: 0px !important" });
-      } else {
-        $(".navbar")
-          .removeClass("position-sticky")
-          .css({ cssText: "top: -30px !important" });
-      }
     });
   }
 }
